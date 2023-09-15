@@ -18,26 +18,26 @@
             "type": "array",
             "defaultValue": [
                 {
-                    "principalId": "68671c17-4e50-4880-975f-671097aba943",       
+                    "principalId": "68671c17-4e50-4880-975f-671097aba943",
                     "principalIdDisplayName": "SOC",
-                    "roleDefinitionId": "fb1c8493-542b-48eb-b624-b4c8fea62acd",  
+                    "roleDefinitionId": "fb1c8493-542b-48eb-b624-b4c8fea62acd",
                 },
                 {
-                    "principalId": "93bcc35d-995b-42a3-9193-6945d3f93a7d",       
+                    "principalId": "93bcc35d-995b-42a3-9193-6945d3f93a7d",
                     "principalIdDisplayName": "MSSP Admin",
-                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",  
+                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
                     "delegatedRoleDefinitionIds": [
-			"8e3af657-a8ff-443c-a75c-2fe8c4bcb635",                  
-                        "b24988ac-6180-42a0-ab88-20f7382dd24c",                  
-                        "fb1c8493-542b-48eb-b624-b4c8fea62acd",                  
-			"361898ef-9ed1-48c2-849c-a832951106bb",                  
-                        "91c1777a-f3dc-4fae-b103-61d183457e46"                   
+			"8e3af657-a8ff-443c-a75c-2fe8c4bcb635",  
+                        "b24988ac-6180-42a0-ab88-20f7382dd24c",
+                        "fb1c8493-542b-48eb-b624-b4c8fea62acd",
+			"361898ef-9ed1-48c2-849c-a832951106bb",
+                        "91c1777a-f3dc-4fae-b103-61d183457e46"
                     ]
                 },
                 {
-                    "principalId": "987dc622-4cf5-4eb6-aeee-980fc2706a60",       
+                    "principalId": "987dc622-4cf5-4eb6-aeee-980fc2706a60",
                     "principalIdDisplayName": "MSSP Registration Manager",
-                    "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46"   
+                    "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46"
                 }
             ]
         }
