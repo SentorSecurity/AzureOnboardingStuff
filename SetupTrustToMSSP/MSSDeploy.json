@@ -19,7 +19,7 @@
             "defaultValue": [
                 {
                     "principalId": "68671c17-4e50-4880-975f-671097aba943",       // SOC
-                    "principalIdDisplayName": "SOC"
+                    "principalIdDisplayName": "SOC",
                     "roleDefinitionId": "fb1c8493-542b-48eb-b624-b4c8fea62acd",  // security admin
                 },
                 {
