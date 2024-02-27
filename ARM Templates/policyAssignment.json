@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2018-05-01/deploymentTemplate.json",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"policyDefinitionID": {
+			"type": "string",
+			"metadata": {
+				"description": "Specifies the ID of the policy definition or policy set definition being assigned."
+			}
+		}
+	},
+	"resources": [
+		{
+			"type": "Microsoft.Authorization/policyAssignments",
+			"apiVersion": "2019-09-01",
+			"name": "AssignmentDeployDiag",
+			"location": "northeurope",
+			"identity": {
+				"type": "SystemAssigned"
+			},
+			"properties": {
+				"description": "Assignment Deploy Diagnostic Settings for selected resource to Log Analytics workspace",
+				"displayName": "Assignment Deploy Diagnostic Settings for selected resource to Log Analytics workspace",
+				"enforcementMode": "default",
+				"policyDefinitionId": "[parameters('policyDefinitionID')]",
+			}
+		}
+	]
+}
