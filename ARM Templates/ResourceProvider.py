@@ -1,18 +1,35 @@
+# Prereqs and step by step guide
+
+# pip install azure-identity azure-mgmt-resource
+# az login
+# python3 .\ResourceProvider.py
+
+import subprocess
 import os
 from azure.identity import DefaultAzureCredential
 from azure.mgmt.resource import ResourceManagementClient
 
-# Authentication
+# Authentication, will use the session that is initialized when signing in to Azure using az login
 credentials = DefaultAzureCredential()
-subscription_ids = os.environ["LIST_OF_SUBSCRIPTION_IDS"].split(',')
+
+# Creats a variable for the subscriptions in a list, they are initially an environment variable set in powershell.
+
+LIST_SUBS = "C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.cmd account list --query \"[].id\" -o tsv"
+
+result = subprocess.run(LIST_SUBS, capture_output=True, text=True)
+output = result.stdout.strip()
+
+subscription_ids = output.split(sep='\n')
 
 # Create list of resource providers to register per subscription
 ResourceProviders = ['Microsoft.PolicyInsights','Microsoft.OperationalInsights','microsoft.insights']
 
-resource_management_clients = {subscription_id: ResourceManagementClient(credentials, subscription_id) for subscription_id in subscription_ids}
+# Creates a dictionary where each key is a subscription ID and the value is an instance of ResourceManagementClient
+# Initialized with the credentials and subscription ID, iterating over each subscription ID in subscription_ids
+resource_management_clients = {subscription_id: ResourceManagementClient(credentials, subscription_id) for subscription_id in subscription_ids[1:]}
 
 # Iterate over list of subscription ID and register resource providers for all of them. 
-for subscription_id in subscription_ids:
+for subscription_id in subscription_ids[1:]:
     print("Now we are going to start registering resources for " + subscription_id)
     for provider in ResourceProviders:
         print("Currently registering " + provider + " for " + subscription_id)
