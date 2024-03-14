@@ -12,10 +12,10 @@ from azure.mgmt.resource import ResourceManagementClient
 # Authentication, will use the session that is initialized when signing in to Azure using az login
 credentials = DefaultAzureCredential()
 
-# Creats a variable for the subscriptions in a list, they are initially an environment variable set in powershell.
-
+# Creates a variable for the subscriptions in a list, the list is generated from the LIST_SUBS variable
 LIST_SUBS = "C:\\Program Files (x86)\\Microsoft SDKs\\Azure\\CLI2\\wbin\\az.cmd account list --query \"[].id\" -o tsv"
 
+# Captures the output from the LIST_SUBS variable and splits the output on \n
 result = subprocess.run(LIST_SUBS, capture_output=True, text=True)
 output = result.stdout.strip()
 
