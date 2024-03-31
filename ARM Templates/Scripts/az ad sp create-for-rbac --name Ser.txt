@@ -1,0 +1,55 @@
+az ad sp create-for-rbac --name ServicePrincipalForFunctionApps --skip-assignment --sdk-auth > FunctionApp_sp.json
+	Denna fil kommer innehålla IDn och Secrets som du behöver dumpa i en KV
+
+
+Gå till KV, antingen skapa ny eller använd någon som finns
+
+
+Klicka på secret
+	"Generate/Import"
+		Manual
+		Namnge den FunctionAppSP
+		Pasta in "clientSecretID" som blev genererad av create scriptet
+
+		Create
+			Ovan behöver man även göra för Tenant och Client ID. Namnge dom
+			FunctionAppC
+			FunctionAppT
+
+
+Klicka på Access confiugration
+Klicka på "Vault access policy"
+	Apply
+
+Gå till Access policies
+	Create
+		Under "Secret permissions" bocka in Get och List
+			Gör detta för Function appen & SP
+
+
+Till vscode/laptop
+	Azure Tools
+	Azure Function Core Apps
+
+
+Script layouts
+
+Mapp: "Function app"
+	|	
+	+ --> Mapp: Scripts
+	|	|
+	|	L --> __init__.py
+	|	L --> function.json
+	|
+	L --> Massa automatiskt genererade filer och mappar
+	
+Följande filerna som blir automatiskt genererade kommer behöva ändras
+host.json
+requirements.txt
+
+Minns inte vilka som behöver ändras av det som står under. (Är typ enbart för tester lokalt IIRC)
+.vscode --> launch.json
+	--> tasks.json
+	--> settings.json
+	--> extensions.json
+	
