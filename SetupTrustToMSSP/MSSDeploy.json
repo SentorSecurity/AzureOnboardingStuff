@@ -23,6 +23,11 @@
                     "principalIdDisplayName": "SOC"
                 },         
                 {
+                    "principalId": "68671c17-4e50-4880-975f-671097aba943",
+                    "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade", 
+                    "principalIdDisplayName": "SOC"
+                },                         
+                {
                     "principalId": "93bcc35d-995b-42a3-9193-6945d3f93a7d",
                     "principalIdDisplayName": "MSSP Admin",
                     "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
