@@ -23,16 +23,16 @@
                     "principalIdDisplayName": "SOC"
                 },         
                 {
-                    "principalId": "68671c17-4e50-4880-975f-671097aba943",
+                    "principalId": "e213af24-1e11-4e1a-bb76-da014f05c43d",
                     "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade", 
                     "principalIdDisplayName": "SOC Sentinel"
                 },
                 {
-                    "principalId": "e213af24-1e11-4e1a-bb76-da014f05c43d",
+                    "principalId": "b3ab1095-298b-4908-b4e0-2a66095ce4f8",
                     "principalIdDisplayName": "SOC User Access",
                     "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
                     "delegatedRoleDefinitionIds": [
-                        "68671c17-4e50-4880-975f-671097aba943",
+                        "b24988ac-6180-42a0-ab88-20f7382dd24c",
                         "ab8e14d6-4a74-4a29-9ba8-549422addade"
                     ]
                 },                     
