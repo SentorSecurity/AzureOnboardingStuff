@@ -30,7 +30,7 @@
                 {
                     "principalId": "e213af24-1e11-4e1a-bb76-da014f05c43d",
                     "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9", 
-                    "principalIdDisplayName": "SOC User Access"
+                    "principalIdDisplayName": "SOC User Access",
                     "delegatedRoleDefinitionIds": [
                         "68671c17-4e50-4880-975f-671097aba943",
                         "ab8e14d6-4a74-4a29-9ba8-549422addade"
