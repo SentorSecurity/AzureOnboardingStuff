@@ -19,7 +19,9 @@
             "defaultValue": [
                 {
                     "principalId": "68671c17-4e50-4880-975f-671097aba943",
-                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c, ab8e14d6-4a74-4a29-9ba8-549422addade, 18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c", 
+                    "roleDefinitionId": "ab8e14d6-4a74-4a29-9ba8-549422addade", 
+                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
                     "principalIdDisplayName": "SOC"
                 },
                 {
