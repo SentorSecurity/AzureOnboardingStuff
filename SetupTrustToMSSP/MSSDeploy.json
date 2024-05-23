@@ -4,7 +4,7 @@
     "parameters": {
         "mspOfferName": {
             "type": "string",
-            "defaultValue": "Sentor Managed Security Services Sentinel"
+            "defaultValue": "Sentor Managed Security Services Sentinel2"
         },
         "mspOfferDescription": {
             "type": "string",
